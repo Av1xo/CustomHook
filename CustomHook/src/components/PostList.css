@@ -1,0 +1,68 @@
+/* Контейнер для списку */
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Картка поста */
+  .post-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 16px); /* Три картки в рядок */
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Зображення поста */
+  .post-image {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover; /* Забезпечує гарний вигляд, якщо зображення має інший формат */
+  }
+  
+  /* Заголовок */
+  .post-title {
+    font-size: 1.25rem;
+    margin: 12px 0 8px;
+    color: #333;
+    text-align: center;
+    padding: 0 8px;
+  }
+  
+  /* Текст поста */
+  .post-body {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 8px 16px;
+    text-align: center;
+  }
+  
+  /* Ефекти при наведенні */
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Адаптація для малих екранів */
+  @media (max-width: 768px) {
+    .post-card {
+      width: calc(50% - 16px); /* Дві картки в рядок */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .post-card {
+      width: 100%; /* Одна картка в рядок */
+    }
+  }
+  
